@@ -29,8 +29,12 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# djangoインスタンスの中で有効化されている全てのdjangoアプリケーションの名前を保持している
+# これらのアプリケーションは最低一つデータベースのテーブルを使うので使い始める前にデータベースにテーブルを作る必要がある。
+# アプリケーションをプロジェクトに含めるには構成クラスへの参照をINSTALLED_APPS設定に追加する必要がある。
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
